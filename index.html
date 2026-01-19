@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Price Comparison </title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Top navbar -->
+  <header class="navbar">
+    <div class="nav-left">
+      <span class="logo">COMPARE MORE</span>
+    </div>
+    <div class="nav-center">
+      <input
+        type="text"
+        id="searchInput"
+        class="search-input"
+        placeholder="Search mobiles, laptops, headphones, watches, cameras..."
+      />
+      <button class="search-btn" onclick="handleSearch()">Search</button>
+    </div>
+    <div class="nav-right">
+      <span class="nav-link">Login</span>
+      <span class="nav-link">Help</span>
+    </div>
+  </header>
+
+  <!-- Main content -->
+  <main class="page">
+    <!-- Info bar -->
+    <section class="info-bar">
+      <div>
+        <h2>Compare prices from Amazon & Flipkart</h2>
+        <p>Select a product to instantly see prices from multiple stores.</p>
+      </div>
+      <div class="badge">Premium</div>
+    </section>
+
+    <!-- Category chips -->
+    <section class="category-bar">
+      <button class="chip active" data-category="all" onclick="filterByCategory('all')">
+        All
+      </button>
+      <button class="chip" data-category="mobile" onclick="filterByCategory('mobile')">
+        Mobiles
+      </button>
+      <button class="chip" data-category="laptop" onclick="filterByCategory('laptop')">
+        Laptops
+      </button>
+      <button class="chip" data-category="headphone" onclick="filterByCategory('headphone')">
+        Headphones
+      </button>
+      <button class="chip" data-category="watch" onclick="filterByCategory('watch')">
+        Watches
+      </button>
+      <button class="chip" data-category="camera" onclick="filterByCategory('camera')">
+        Cameras
+      </button>
+    </section>
+
+    <!-- Product grid -->
+    <section class="product-grid" id="productGrid">
+      <!-- Cards are inserted by JS -->
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© 2026 PCW Price Comparison Demo. Product images are for illustration only.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
